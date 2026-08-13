@@ -1,0 +1,17 @@
+project_id  = "your-gcp-project-id"
+region      = "asia-south1"
+name_prefix = "pubsub-e2e"
+
+# Domain that will point (A record) at the load balancer's static IP.
+# Needed for the Google-managed SSL certificate to provision.
+lb_domain = "status.yourdomain.com"
+
+# Leave blank to skip creating a push subscription (pull + GCS archive
+# subscriptions are always created). Fill in once you deploy a Cloud Run
+# push receiver, e.g.:
+# push_endpoint = "https://events-receiver-xyz.a.run.app/pubsub/push"
+push_endpoint = ""
+
+archive_bucket_location = "ASIA"
+site_bucket_location    = "ASIA"
+enable_cdn              = true

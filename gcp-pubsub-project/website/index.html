@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Pub/Sub Event Pipeline — Status</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; background:#0b0f14; color:#e6edf3; margin:0; padding:40px; }
+  .card { max-width:640px; margin:0 auto; background:#111823; border:1px solid #22303f; border-radius:12px; padding:32px; }
+  h1 { font-size:1.4rem; margin-top:0; }
+  .row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #1c2733; }
+  .ok { color:#3fb950; font-weight:600; }
+  .muted { color:#8b949e; font-size:0.9rem; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Pub/Sub Event Pipeline</h1>
+    <p class="muted">Static status page served from a Cloud Storage bucket via an HTTP(S) Load Balancer.</p>
+    <div class="row"><span>Topic</span><span class="ok">events — active</span></div>
+    <div class="row"><span>Pull subscription</span><span class="ok">connected</span></div>
+    <div class="row"><span>GCS archive subscription</span><span class="ok">writing</span></div>
+    <div class="row"><span>Dead-letter topic</span><span class="ok">monitoring</span></div>
+    <p class="muted" style="margin-top:24px">Served via Cloud CDN-enabled backend bucket. Replace this page with a real dashboard (e.g. one that reads recent messages from the archive bucket via a small API).</p>
+  </div>
+</body>
+</html>
